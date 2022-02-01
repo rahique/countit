@@ -3,9 +3,12 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  height: 100vh;
+}
 .container {
   background-color: rgb(88, 211, 143);
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
