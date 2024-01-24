@@ -37,6 +37,7 @@
 .dec_btn,
 .save_btn,
 .clear_btn {
+  -webkit-tap-highlight-color: transparent;
   align-items: center;
   appearance: none;
   border: 0;
