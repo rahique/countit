@@ -8,17 +8,18 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="container">
-      <h1 class="count">0</h1>
-      <button onclick="increment()" class="int_btn">Increment</button>
-      <button onclick="decrement()" class="dec_btn">Decrement</button>
-      <div class="flex">
-        <button onclick="save()" class="save_btn">Save</button>
-        <button onclick="erase()" class="clear_btn">Clear</button>
+    <main class="main">
+      <div class="container">
+        <div class="count"><span>0</span></div>
+        <button onclick="increment()" class="int_btn">Increment</button>
+        <button onclick="decrement()" class="dec_btn">Decrement</button>
+        <div class="flex">
+          <button onclick="save()" class="save_btn">Save</button>
+          <button onclick="erase()" class="clear_btn">Clear</button>
+        </div>
+        <span class="previous">Previous Entry : </span>
       </div>
-      <span class="previous">Previous Entry : </span>
-    </div>
-
+    </main>
     <script src="app.js"></script>
   </body>
 </html>
