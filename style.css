@@ -56,7 +56,7 @@
   padding-right: 16px;
   text-align: left;
   text-decoration: none;
-  transition: all 0.15s ease;
+  transition: all 100ms ease;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -107,7 +107,8 @@
   color: aliceblue;
 }
 
-.previous {
+.main-output {
+  max-width: 50rem;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   background-color: rgba(80, 80, 80, 0.05);
