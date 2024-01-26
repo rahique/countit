@@ -27,7 +27,7 @@ function save() {
 }
 function erase() {
   write.innerText = 'Previous Entry : ';
-  total.innerText = ' ';
+  total.innerText = '0';
   totalCount = 0;
   localStorage.clear();
 }
@@ -38,7 +38,6 @@ function callStorage() {
     write.innerText += ' ' + storage;
     total.innerText += ' ' + totalStorage;
     totalCount = parseInt(totalStorage);
-    
   } else {
     return;
   }
