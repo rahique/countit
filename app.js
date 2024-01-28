@@ -1,45 +1,57 @@
-let count = document.querySelector('.count');
-let write = document.querySelector('.previous');
-let total = document.querySelector('.total');
+// Selectors
+const count = document.querySelector('.count');
+const write = document.querySelector('.previous');
+const total = document.querySelector('.total');
 
+// Variables
 let countEl = 0;
 let totalCount = 0;
 
-function increment() {
-  countEl++;
+// Functions
+function updateCount() {
   count.innerText = countEl;
 }
+
+function increment() {
+  countEl++;
+  updateCount();
+}
+
 function decrement() {
-  if (countEl === 0) {
-    count.innerText == countEl;
-  } else {
+  if (countEl > 0) {
     countEl--;
-    count.innerText = countEl;
+    updateCount();
   }
 }
+
 function save() {
-  write.innerText += ' ' + countEl + ' • ';
+  write.innerText += ` ${countEl} • `;
   totalCount += countEl;
   total.innerText = totalCount;
-  let entryStore = write.innerText.substr(16);
-  localStorage.setItem('entry', entryStore);
+  countEl = 0;
+  count.innerText = `${countEl}`
+
+  localStorage.setItem('entry', write.innerText.substr(16));
   localStorage.setItem('total', totalCount);
 }
+
 function erase() {
   write.innerText = 'Previous Entry : ';
   total.innerText = '0';
   totalCount = 0;
   localStorage.clear();
 }
+
 function callStorage() {
-  let storage = localStorage.getItem('entry');
-  let totalStorage = localStorage.getItem('total');
-  if (storage != null) {
-    write.innerText += ' ' + storage;
-    total.innerText += ' ' + totalStorage;
+  const storage = localStorage.getItem('entry');
+  const totalStorage = localStorage.getItem('total');
+
+  if (storage !== null) {
+    write.innerText += ` ${storage}`;
+    total.innerText += ` ${totalStorage}`;
     totalCount = parseInt(totalStorage);
-  } else {
-    return;
   }
 }
+
+// Event listeners
 window.onload = callStorage;
