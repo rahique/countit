@@ -33,6 +33,16 @@
   font-size: 5rem;
   font-weight: 600;
 }
+.cunter-wrapper {
+  display: flex;
+  position: relative;
+}
+.cunter-wrapper > button {
+  position: absolute;
+  top: 2rem;
+  left: 95%;
+  padding: 1rem;
+}
 .flex {
   display: flex;
   justify-content: center;

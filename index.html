@@ -10,7 +10,17 @@
   <body>
     <main class="main">
       <div class="container">
-        <div class="count"><span>0</span></div>
+        <div class="cunter-wrapper">
+          <div class="count">
+            <span>0</span>
+          </div>
+          <button onclick="countReset()" class="dec_btn">
+            <i
+              class="fa-sharp fa-solid fa-arrows-rotate"
+              style="color: #f7f7f7"
+            ></i>
+          </button>
+        </div>
         <button onclick="increment()" class="int_btn">Increment</button>
         <button onclick="decrement()" class="dec_btn">Decrement</button>
         <div class="flex">
@@ -25,5 +35,9 @@
       </div>
     </main>
     <script src="app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/e9219c6bfc.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
