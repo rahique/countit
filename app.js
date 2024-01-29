@@ -33,8 +33,6 @@ function save() {
   write.innerText += ` ${countEl} • `;
   totalCount += countEl;
   total.innerText = totalCount;
-  countEl = 0;
-  count.innerText = `${countEl}`;
 
   localStorage.setItem('entry', write.innerText.substr(16));
   localStorage.setItem('total', totalCount);
