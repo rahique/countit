@@ -32,6 +32,10 @@
   color: white;
   font-size: 5rem;
   font-weight: 600;
+  overflow: hidden;
+}
+.count > h4 {
+  transition: all 100ms ease;
 }
 .cunter-wrapper {
   display: flex;
