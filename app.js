@@ -7,27 +7,23 @@ const total = document.querySelector('.total');
 // Variables
 let countEl = 0;
 let totalCount = 0;
-
+let rotate = 0;
 // Functions
 function updateCount() {
-  countText.innerText = countEl;
-  countText.style.transform = `translateY(-10rem)`;
-  countText.style.opacity = 0;
+  countText.style.rotate = `${rotate}deg`;
   setTimeout(() => {
-    countText.style.transform = `translateY(15rem)`;
-    setTimeout(() => {
-      countText.style.transform = `translateY(0)`;
-      countText.style.opacity = 1;
-    }, 100);
-  }, 110);
+    countText.innerText = `${countEl}`;
+  }, 100);
 }
 
 function increment() {
+  rotate += 360;
   countEl++;
   updateCount();
 }
 
 function decrement() {
+  rotate -= 360;
   if (countEl > 0) {
     countEl--;
     updateCount();
